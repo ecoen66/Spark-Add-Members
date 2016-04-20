@@ -24,11 +24,11 @@ headers_get = {"Authorization": auth_token}
 headers_post = {"Authorization": auth_token,"content-type": "application/json"}
 
 # Thes URLs will be used later to GET the rooms list and to POST new memberships
-get_spark_url = spark_url + "v1/rooms"
+get_rooms_url = spark_url + "v1/rooms"
 post_members_url = spark_url + "v1/memberships"
 
-# Perform GET on get_spark_url and load response into a json object
-get_rooms_response = requests.get(get_spark_url, headers=headers_get)
+# Perform GET on get_rooms_url and load response into a json object
+get_rooms_response = requests.get(get_rooms_url, headers=headers_get)
 get_rooms_json = get_rooms_response.json()
 
 # Now let's read some specific information from the json
